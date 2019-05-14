@@ -1,0 +1,324 @@
+@charset "utf-8";
+/* master CSS Document */
+html,body,table,th,tr,td,div,span,input,select,textarea,ul,li,dl,ol,dt,dd,form,p,hr,img,h1,h2,h3{
+	padding:0;
+	margin:0;
+}
+img{
+	border:0;
+	vertical-align: bottom; 
+}
+html,body {
+	width:100%;
+	height:100%;
+	font-size:14px;
+	color:#444;
+	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",Arial;
+}
+a{text-decoration:none;color:#337ab7}
+a:hover{color:#f60}
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
+ul{list-style:none;}
+input,button{
+	vertical-align:middle;
+	overflow:visible;
+	color:#456a8f;
+	font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",Arial;
+}
+input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner,input[type="password"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner{border:none;padding:0;}/* for firefox Button Bug*/
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.container{
+	overflow:hidden;
+	position:relative;
+	max-width:1100px;
+	_width:1100px;
+	text-align:left;
+	margin:0 auto;	
+}
+/*-----------login-------------*/
+.loginWrap{
+	margin: 0;
+  padding: 0!important;
+	min-height: 100%;
+  margin-bottom:-50px; 
+	text-align:center;
+}
+.loginWrap:after{
+  content: "";
+  display: block;
+	height:50px;
+}
+.loginTopBar{
+	background:#fff;
+	padding:10px 0;
+}
+.sysLogo{
+	display:block;
+	float:left;
+	width:71px;
+	height:36px;
+	background:url(./images/logo.png) no-repeat;
+}
+.sysName{
+	position:relative;
+	top:7px;
+	display:block;
+	float:left;
+	width:326px;
+	height:26px;
+	margin-left:18px;
+	background:url(./images/logo.png) no-repeat;	
+}
+.helpBar{
+	margin-top:12px;
+}
+.helpBar li{
+	float:left;
+	margin-left:15px;
+	padding-left:15px;
+	line-height:120%;
+	border-left:1px solid #ccc;
+}
+.helpBar li:first-child{
+	border-left:none;
+	margin-left:0;	
+}
+.loginMainBox{
+	position:relative;
+	overflow:hidden;
+	background:#4fb0e8;
+}
+.loginMainBox .container{
+	min-height:520px;
+	z-index:19;
+}
+.loginFormNew{
+	position:absolute;
+	top:100px;
+	right:0;
+	width:260px;
+	padding:15px 15px 20px 15px;
+	-moz-border-radius:8px; 
+	-webkit-border-radius:8px; 
+	border-radius:8Px; 
+	border:1px solid #e5f3fc;
+	behavior:url(../js/PIE.htc);
+	background-color:rgba(255,255,255,.7);
+	background-color:rgb(202,231,248)\9;
+	background-color:rgba(0,0,0,0.7)\9\0;  
+	z-index:29;
+}
+.loginFormNew h2{
+	font-size:17px;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.logInt,.shortInt{
+	position:relative;
+	*right:8px;
+	height:38px;
+	line-height:36px;
+	font-size:16px;
+	width:100%;
+	text-indent:8px;
+	margin-bottom:8px;
+	-moz-border-radius:4px; 
+	-webkit-border-radius:4px; 
+	border-radius:4px;
+	border:1px solid #5aaef2;
+	behavior:url(../js/PIE.htc);
+}
+.shortInt{
+	width:40%;
+}
+.loginFormNew ul li{
+	position:relative;
+}
+.loginFormNew .logInfoBar a{
+	border-left:1px solid #9ebde0;
+	padding:0 4px 0 8px;
+	line-height:100%;
+}
+.loginFormNew .logInfoBar a:first-child{
+	border-left:none;	
+}
+.vCode{
+	position:relative;
+	top:-3px;
+	margin:0 6px;
+	vertical-align:middle;
+}
+.btnPrimary{
+	width:100%;
+	padding:9px 0;
+	font-size:16px;
+	color:#fff;
+	margin-top:20px;
+	background:#1d94e1;
+	-moz-border-radius:4px; 
+	-webkit-border-radius:4px; 
+	border-radius:4px;
+	border:1px solid #1484cc; 
+	behavior:url(../js/PIE.htc);
+	cursor:pointer;
+}
+.BubbleTip{
+	position:absolute;
+	bottom:50px;
+	max-width:100%;
+	color:#d02541;
+	-moz-border-radius:4px; 
+	-webkit-border-radius:4px; 
+	border-radius:4px;
+	border:1px solid #e5bcc0;
+	background:#faeef0; 
+	behavior:url(../js/PIE.htc);
+	z-index:99;	
+}
+.BubbleTip p{
+	text-align:left;	
+	text-justify:distribute-all-lines;/*ie6-8*/	
+	text-align-last:left;/* ie9*/	
+	-moz-text-align-last:left;/*ff*/
+	-webkit-text-align-last:left;
+	margin:4px 8px;
+}
+.BubbleTip .arrow{
+	position:absolute;
+	bottom:-11px;
+	left:20px;
+}
+.loginImgBox{
+	position:relative;
+	top:100px;
+	margin-right:310px;
+}
+@keyframes fadeInLeft{
+	0%{opacity:0;
+	transform:translateX(-60px)}
+	100%{opacity:1;
+	transform:translateX(0)}
+}
+@-webkit-keyframes fadeInLeft{
+	0%{opacity:0;
+	-webkit-transform:translateX(-60px)}
+	100%{opacity:1;
+	-webkit-transform:translateX(0)}
+}
+@-moz-keyframes fadeInLeft{
+	0%{opacity:0;
+	-moz-transform:translateX(-60px)}
+	100%{opacity:1;
+	-moz-transform:translateX(0)}
+}
+.imgCont{
+	position:absolute;
+	right:0;
+	top:0;
+	height:287px;
+	width:551px;
+	background:url(../images/logImgBlueA.png) no-repeat;
+	animation:fadeInLeft 1s .2s ease both;
+	-webkit-animation:fadeInLeft 1s .2s ease both;
+	-moz-animation:fadeInLeft 1s .2s ease both;
+}
+@keyframes fadeInRight{
+	0%{opacity:0;
+	transform:translateX(30px)}
+	100%{opacity:1;
+	transform:translateX(0)}
+}
+@-webkit-keyframes fadeInRight{
+	0%{opacity:0;
+	-webkit-transform:translateX(30px)}
+	100%{opacity:1;
+	-webkit-transform:translateX(0)}
+}
+@-moz-keyframes fadeInRight{
+	0%{opacity:0;
+	-moz-transform:translateX(30px)}
+	100%{opacity:1;
+	-moz-transform:translateX(0)}
+}
+.titleTxt{
+	position:relative;
+	border-left:5px solid #8dd7f3;
+	padding-left:15px;
+	animation:fadeInRight 1s 0.6s ease both;
+	-webkit-animation:fadeInRight 1s 0.6s ease both;
+	-moz-animation:fadeInRight 1s 0.6s ease both;
+}
+.titleTxt .txtA{
+	font-size:54px;
+	font-weight:bold;
+	font-family:"Arial Black", Gadget, sans-serif,"宋体";
+	letter-spacing:8px;
+	line-height:100%;
+	color:#ffd300;
+}
+.titleTxt .txtB{
+	font-size:20px;
+	text-indent:3px;
+	font-weight:lighter;
+	letter-spacing:6px;
+	line-height:120%;
+	padding-top:10px;
+	color:#fff
+}
+.imgCirBg{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:9;
+}
+.imgCirBg .cirSliceA,.imgCirBg .cirSliceB,.imgCirBg .cirSliceC{
+	position:absolute;
+	border:2px solid #63baec;
+		 -moz-border-radius:500px;
+	-webkit-border-radius:500px;
+		    border-radius:500px;
+	behavior:url(../js/PIE.htc);
+}
+.imgCirBg .cirSliceA{
+	top:-600px;
+	left:-300px;	
+	height:900px;
+	width:900px;
+}
+.imgCirBg .cirSliceB{
+	top:-300px;
+	right:-100px;
+	height:600px;
+	width:600px;
+}
+.imgCirBg .cirSliceC{
+	top:110px;
+	left:100px;
+	height:600px;
+	width:600px;
+border:2px solid #6fc0ef;
+}
+/*---------footer----------------*/
+.footerCopy .container{
+	height:50px;
+	line-height:35px;
+}
+
+.btn2 {
+	background:url(../images/btn_smallBg.png) repeat-x top left;
+	border:1px solid #95B5E2;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 12px;
+	color: #253A68;
+	cursor: pointer;
+}

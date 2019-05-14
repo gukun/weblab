@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.njrz.modules.lab.dao.LabDao">
+    
+	<sql id="labColumns">
+		a.id AS "id",
+		a.name AS "name",
+		a.lesson AS "lesson",
+		a.lab_type AS "labType",
+		a.remarks AS "remarks",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate"
+	</sql>
+	
+	<sql id="labJoins">
+	</sql>
+    
+	<select id="get" resultType="Lab">
+		SELECT 
+			<include refid="labColumns"/>
+		FROM sys_lab a
+		<include refid="labJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="Lab">
+		SELECT 
+			<include refid="labColumns"/>,
+			b.NAME as lessonName
+		FROM sys_lab a,sys_lesson b
+		<include refid="labJoins"/>
+		<where>
+			a.lesson = b.id
+			<if test="name != null and name != ''">
+				AND a.name like
+				<if test="dbName == 'oracle'">'%'||#{name}||'%'</if>
+				<if test="dbName == 'mysql'">CONCAT('%', #{name}, '%')</if>
+			</if>
+			<if test="lessonName != null and lessonName != ''">
+				AND b.name like
+				<if test="dbName == 'oracle'">'%'||#{lessonName}||'%'</if>
+				<if test="dbName == 'mysql'">CONCAT('%', #{lessonName}, '%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="Lab">
+		SELECT 
+			<include refid="labColumns"/>
+		FROM sys_lab a
+		<include refid="labJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO sys_lab(
+			id,
+			name,
+			lesson,
+			lab_type,
+			remarks,
+			create_by,
+			create_date,
+			update_by,
+			update_date
+		) VALUES (
+			#{id},
+			#{name},
+			#{lesson},
+			#{labType},
+			#{remarks},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE sys_lab SET 	
+			name = #{name},
+			lesson = #{lesson},
+			lab_type = #{labType},
+			remarks = #{remarks},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate}
+		WHERE id = #{id}
+	</update>
+	
+	
+	<!--物理删除-->
+	<update id="delete">
+		DELETE FROM sys_lab
+		WHERE id = #{id}
+	</update>
+	
+	<!--逻辑删除-->
+	<update id="deleteByLogic">
+		UPDATE sys_lab SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+	
+	<!-- 根据实体名称和字段名称和字段值获取唯一记录 -->
+	<select id="findUniqueByProperty" resultType="Lab" statementType="STATEMENT">
+		select * FROM sys_lab  where ${propertyName} = '${value}'
+	</select>
+</mapper>

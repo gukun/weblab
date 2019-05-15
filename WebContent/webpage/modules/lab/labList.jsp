@@ -5,8 +5,6 @@
 	<title>实验室管理</title>
 	<meta name="decorator" content="default"/>
 	<script type="text/javascript">
-		$(document).ready(function() {
-		});
 	</script>
 </head>
 <body class="gray-bg">

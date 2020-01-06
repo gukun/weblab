@@ -35,7 +35,7 @@ import com.njrz.modules.lab.service.LabService;
 /**
  * 实验室管理Controller
  * @author gk
- * @version 2016-05-09
+ * @version 2019-05-09
  */
 @Controller
 @RequestMapping(value = "${adminPath}/lab/lab")

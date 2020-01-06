@@ -10,7 +10,7 @@ import com.njrz.modules.lab.entity.Lab;
 /**
  * 实验室管理DAO接口
  * @author gk
- * @version 2016-05-09
+ * @version 2019-05-09
  */
 @MyBatisDao
 public interface LabDao extends CrudDao<Lab> {

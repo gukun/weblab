@@ -19,7 +19,7 @@ import com.njrz.modules.lab.dao.LabDao;
 /**
  * 实验室管理Service
  * @author gk
- * @version 2016-05-09
+ * @version 2019-05-09
  */
 @Service
 @Transactional(readOnly = true)

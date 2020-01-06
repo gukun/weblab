@@ -6,8 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cfba91d-7e55-4305-9e3e-10ea0b5b25ff" name="Default" comment="配置">
+    <list default="true" id="1cfba91d-7e55-4305-9e3e-10ea0b5b25ff" name="Default" comment="更新去掉测试代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/webpage/modules/lab/labForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/webpage/modules/lab/labForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/webpage/modules/lab/labList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/webpage/modules/lab/labList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/dao/LabDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/dao/LabDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/entity/Lab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/entity/Lab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/service/LabService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/service/LabService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/web/LabController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/njrz/modules/lab/web/LabController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -458,7 +464,7 @@
       <workItem from="1557801800211" duration="5540000" />
       <workItem from="1557883902894" duration="2951000" />
       <workItem from="1557900892730" duration="180000" />
-      <workItem from="1578283587504" duration="1126000" />
+      <workItem from="1578283587504" duration="1455000" />
     </task>
     <task id="LOCAL-00001" summary="配置">
       <created>1557802036629</created>
@@ -481,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557885913167</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="更新去掉测试代码">
+      <created>1578287887177</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578287887177</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +522,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="配置" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="更新去掉测试代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新去掉测试代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

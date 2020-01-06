@@ -11,7 +11,7 @@ import com.njrz.common.utils.excel.annotation.ExcelField;
 /**
  * 实验室管理Entity
  * @author gk
- * @version 2016-05-09
+ * @version 2019-05-09
  */
 public class Lab extends DataEntity<Lab> {
 	

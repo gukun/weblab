@@ -10,7 +10,7 @@ import com.njrz.modules.monitor.entity.Monitor;
 /**
  * 系统监控DAO接口
  * @author liugf
- * @version 2016-03-28
+ * @version 2020-03-28
  */
 @MyBatisDao
 public interface MonitorDao extends CrudDao<Monitor> {

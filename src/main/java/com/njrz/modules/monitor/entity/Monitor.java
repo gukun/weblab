@@ -11,7 +11,7 @@ import com.njrz.common.utils.excel.annotation.ExcelField;
 /**
  * 系统监控Entity
  * @author liugf
- * @version 2016-03-28
+ * @version 2019-03-28
  */
 public class Monitor extends DataEntity<Monitor> {
 	
